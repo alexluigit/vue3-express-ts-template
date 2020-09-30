@@ -1,4 +1,4 @@
-const express = require('express')
+import express from 'express'
 const router = express.Router()
 
 router.get('/posts', (req, res) => {
@@ -9,4 +9,4 @@ router.get('/tags', (req, res) => {
   res.send('api-tags')
 })
 
-module.exports = router
+export default router

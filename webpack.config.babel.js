@@ -1,11 +1,11 @@
-const HTMLWebpackPlugin = require('html-webpack-plugin')
-const { join } = require('path')
-const { VueLoaderPlugin } = require('vue-loader')
-const { HotModuleReplacementPlugin } = require('webpack')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const configureAPI = require('./src/server/configureAPI')
+import HTMLWebpackPlugin from 'html-webpack-plugin'
+import {join} from 'path'
+import {VueLoaderPlugin} from 'vue-loader'
+import {HotModuleReplacementPlugin} from 'webpack'
+import {CleanWebpackPlugin} from 'clean-webpack-plugin'
+import configureAPI from './src/server/configureAPI'
 
-module.exports = {
+export default {
   mode: 'development',
   entry: join(__dirname, './src/client/main.js'),
   output: {

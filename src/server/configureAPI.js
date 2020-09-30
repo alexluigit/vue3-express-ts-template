@@ -1,7 +1,7 @@
-const bodyParser = require('body-parser')
-const api = require('./api')
+import {json} from 'body-parser'
+import api from './api'
 
-module.exports = (app) => {
-  app.use(bodyParser.json())
+export default (app) => {
+  app.use(json())
   app.use('/api',api)
 }
