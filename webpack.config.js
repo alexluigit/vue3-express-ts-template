@@ -30,10 +30,12 @@ module.exports = {
         loader: 'vue-loader'
       },
       {
-        test: /\.css$/,
+        test: /\.(sa|sc|c)ss$/,
         use: [
           'vue-style-loader',
-          'css-loader'
+          'css-loader',
+          'postcss-loader',
+          'sass-loader'
         ]
       }
     ]
