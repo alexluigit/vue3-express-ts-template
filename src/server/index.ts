@@ -1,6 +1,6 @@
 import express from 'express'
 import path from 'path'
-import configureAPI from './configureAPI.js'
+import configureAPI from './configureAPI'
 
 const app = express()
 configureAPI(app)
