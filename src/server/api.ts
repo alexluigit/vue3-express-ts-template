@@ -1,10 +1,8 @@
-import express from 'express'
-// import createIndex from './createIndex'
+import express, {Request, Response} from 'express'
 
 const router = express.Router()
 
-router.get('/posts', async (req, res) => {
-  // const index = await createIndex
+router.get('/posts', async (req: Request, res: Response) => {
   res.send('api-posts')
 })
 

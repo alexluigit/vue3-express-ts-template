@@ -15,9 +15,16 @@ export default {
       },
       {
         test: /\.ts$/,
-        use: [
-          'ts-loader',
-        ]
+        use: {
+          loader: 'ts-loader',
+          options: {
+            transpileOnly: true,
+            appendTsSuffixTo: [
+              '\\.vue$'
+            ],
+            happyPackMode: false
+          }
+        }
       },
       {
         test: /\.vue$/,

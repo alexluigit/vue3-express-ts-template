@@ -1,8 +1,8 @@
-import express from 'express'
+import express, { Application } from 'express'
 import path from 'path'
 import configureAPI from './configureAPI'
 
-const app = express()
+const app:Application = express()
 configureAPI(app)
 
 app.use(express.static(path.resolve('dist')))
